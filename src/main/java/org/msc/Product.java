@@ -1,6 +1,6 @@
 package org.msc;
 
-public abstract class Product {
+public class Product {
     private String name;
     public double price;
 
@@ -14,6 +14,10 @@ public abstract class Product {
     }
 
     public String getName() {
+        return name;
+    }
+
+    public String getList() {
         return name;
     }
 }

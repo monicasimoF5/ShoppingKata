@@ -19,6 +19,10 @@ public class FreeProductTest {
         assertEquals(90, food.getDiscount());
     }
 
-
+    @Test
+    public void whenProductInCart_thenExceptionExist(){
+        Product product = new Product("perejil",0);
+        assertEquals("perejil", product.getList());
+    }
 
 }

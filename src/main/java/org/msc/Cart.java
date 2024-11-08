@@ -18,5 +18,12 @@ public class Cart {
                 throw new IllegalArgumentException("Este producto ya existe en el carrito.");
             }
         }
+
+        Product product = new Product(addName, addPrice);
+        cart.add(product);
+    }
+
+    public List<Product> getCart(){
+        return this.cart;
     }
 }
