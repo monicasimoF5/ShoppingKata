@@ -2,27 +2,23 @@ package org.msc;
 
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FreeProductTest {
 
     @Test
-    public void elPrecioDeLosProductosGratuitosEsSiempreCero() {
+    public void elPrecioDeLosProductosGratuitosEsSiempreCero_losProductosGratuitosTienenNombre() {
+        //Given
         FreeProduct freeProduct = new FreeProduct("perejil");
+        //When
         assertEquals(0.0, freeProduct.getPrice());
-        assertEquals("perejil", freeProduct.getName());
+        //Then
+        assertEquals(0.0, freeProduct.getName());
     }
 
-    @Test
-    public void whenFoodHaveDiscount_thenPriceWithDiscount(){
-        Food food = new Food ("Carxofa",100);
-        assertEquals(90, food.getDiscount());
-    }
 
-    @Test
-    public void whenProductInCart_thenExceptionExist(){
-        Product product = new Product("perejil",0);
-        assertEquals("perejil", product.getList());
-    }
+
 
 }

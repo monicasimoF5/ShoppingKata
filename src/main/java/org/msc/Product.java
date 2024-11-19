@@ -1,7 +1,7 @@
 package org.msc;
 
 public class Product {
-    private String name;
+    public String name;
     public double price;
 
     public Product(String name, double price) {

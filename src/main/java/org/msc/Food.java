@@ -6,7 +6,7 @@ public class Food extends Product {
         super (name, price);
     }
 
-    private double discount(){
+    public double discount(){
         double discount = this.price *= 0.10;
         return discount;
     }
