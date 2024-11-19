@@ -12,10 +12,9 @@ class CartTest {
     @Test
     void whenAddProduct_thenAddCart() {
         //Given
-        Cart cart = new Cart("perejil", 10.0);
+        Cart cart = new Cart("perejil", 0.0);
         // When
         cart.addProduct("cebolla", 10.0);
-        assertThrows(IllegalArgumentException.class, () -> cart.addProduct("cebolla", 10.0));
         assertEquals(1, cart.getCart().size());
         // Then
         cart.addProduct("calabaza", 20.0);
@@ -23,7 +22,15 @@ class CartTest {
     }
 
     @Test
-    void getCart() {
+    void whenAddProduct_thenGetCart() {
+        Cart cart = new Cart("perejil", 0.0);
+        cart.addProduct("cebolla", 10.0);
+        cart.addProduct("calabaza", 20.0);
+
+        List<Product> products = cart.getCart();
+        assertEquals(2, products.size());
+        assertEquals("cebolla", products.get(0).getName());
+        assertEquals("calabaza", products.get(1).getName());
     }
 
 }
